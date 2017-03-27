@@ -1,0 +1,28 @@
+@import 'fonts.scss';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+#header {
+  height: 200px;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  .logo {
+    float: left;
+    height: 80px;
+    width: auto;
+  }
+
+}

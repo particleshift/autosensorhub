@@ -1,0 +1,27 @@
+{
+  "name": "autosensorhub",
+  "version": "1.0.0",
+  "description": "autosensorhub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/particleshift/autosensorhub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/particleshift/autosensorhub/issues"
+  },
+  "homepage": "https://github.com/particleshift/autosensorhub#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-scss": "^1.4.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-useref": "^3.1.2"
+  }
+}
