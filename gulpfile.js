@@ -28,7 +28,7 @@ gulp.task('img', function() {
     }));
 });
 
-gulp.task('watch', ['browserSync', 'scss', 'html', 'img'], function() {
+gulp.task('default', ['browserSync', 'scss', 'html', 'img'], function() {
   gulp.watch('src/scss/**/*.scss', ['scss']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/assets/**/*.*', ['img']);
