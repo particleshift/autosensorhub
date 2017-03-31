@@ -79,7 +79,7 @@ main {
   max-width: 800px; }
 
 #header {
-  background-image: URL("/assets/subaru.jpg");
+  background-image: url("https://raw.githubusercontent.com/particleshift/autosensorhub/master/dist/assets/subaru.jpg");
   background-position: 50% 50%;
   background-size: 100% auto;
   height: 200px;
