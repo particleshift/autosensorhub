@@ -1,0 +1,202 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/sTdaA6j0Psb920Vjv-mrzH-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/uYECMKoHcO9x1wdmbyHIm3-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/tnj4SB6DNbdaQnsM8CFqBX-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  unicode-range: U+1F00-1FFF; }
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/_VYFx-s824kXq_Ul2BHqYH-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  unicode-range: U+0370-03FF; }
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/NJ4vxlgWwWbEsv18dAhqnn-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/Ks_cVxiCiwUWVsFWFA3Bjn-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+html, body {
+  margin: 0 20px;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, p, span {
+  margin: 0; }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+
+main {
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  margin: auto;
+  max-width: 800px; }
+
+#header {
+  background-image: URL("/assets/subaru.jpg");
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  height: 200px;
+  padding: 20px;
+  position: relative; }
+  #header img {
+    display: none; }
+  #header .logo, #header h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  #header .logo {
+    float: left;
+    height: 120px;
+    width: auto; }
+  #header h1 {
+    float: left;
+    margin: 0 140px 0; }
+
+.section-header {
+  background-color: #505050;
+  border-top: 2px solid #EFEFEF;
+  color: white;
+  display: flex;
+  height: 38px;
+  flex-direction: row;
+  align-items: center; }
+  .section-header h2 {
+    background-color: #ef4136;
+    color: white;
+    font-size: 18px;
+    line-height: 1;
+    padding: 10px 30px 10px 20px;
+    position: relative; }
+    .section-header h2::before {
+      border-color: transparent transparent transparent #ef4136;
+      border-style: solid;
+      border-width: 19px 0 19px 15px;
+      content: '';
+      height: 0;
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 0; }
+  .section-header span {
+    margin-left: 35px; }
+
+.box-container {
+  display: flex; }
+  .box-container img {
+    width: 100%; }
+  .box-container.fifty-fifty div {
+    align-items: center;
+    background-color: #1c75bc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 50%; }
+  .box-container.fifty-fifty div:last-child {
+    background-color: #EFEFEF;
+    color: black; }
+  .box-container.fifty-fifty.point-right div:first-child::before {
+    border-color: transparent transparent transparent #1c75bc;
+    border-style: solid;
+    border-width: 40px 0 40px 40px;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: -40px;
+    width: 0;
+    z-index: 1; }
+  .box-container.fifty-fifty.point-left div:last-child::before {
+    border-color: transparent #EFEFEF transparent transparent;
+    border-style: solid;
+    border-width: 40px 40px 40px 0;
+    content: '';
+    height: 0;
+    position: absolute;
+    left: -40px;
+    width: 0;
+    z-index: 1; }
+  .box-container.fifty-fifty.no-img div {
+    background-color: #EFEFEF;
+    color: black;
+    padding: 100px 40px; }
+  .box-container.fifty-fifty.no-img div:last-child {
+    background-color: #1c75bc;
+    color: white; }
+  .box-container.point-down {
+    flex-direction: column; }
+    .box-container.point-down > div:first-child {
+      background-color: #1c75bc;
+      color: white;
+      padding: 40px;
+      position: relative; }
+      .box-container.point-down > div:first-child::before {
+        border-color: #1c75bc transparent transparent transparent;
+        border-style: solid;
+        border-width: 30px 40px 0 40px;
+        bottom: -30px;
+        content: '';
+        height: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 0; }
+    .box-container.point-down > div:last-child {
+      display: flex;
+      flex-direction: column; }
+      .box-container.point-down > div:last-child .alphabet-box {
+        padding: 40px 20px; }
+        .box-container.point-down > div:last-child .alphabet-box span {
+          color: #ef4136;
+          font-size: 24px; }
+      @media SCREEN and (min-width: 767px) {
+        .box-container.point-down > div:last-child {
+          flex-direction: row; }
+          .box-container.point-down > div:last-child .alphabet-box {
+            width: 50%; } }
