@@ -2,7 +2,7 @@
 $blue: #1c75bc;
 $red: #ef4136;
 $gray-1: #EFEFEF;
-$gray-2: #969696;
+$gray-2: #505050;
 
 .text-left { text-align: left; }
 
@@ -66,9 +66,10 @@ main {
 }
 
 .section-header {
-  background-color: #fff;
-  border-bottom: 2px solid $gray-1;
+  background-color: $gray-2;
+  //border-bottom: 2px solid $gray-1;
   border-top: 2px solid $gray-1;
+  color: white;
   display: flex;
   height: 38px;
   flex-direction: row;
@@ -79,7 +80,7 @@ main {
   }
 
   h2 {
-    background-color: $blue;
+    background-color: $red;
     color: white;
     font-size: 18px;
     line-height: 1;
@@ -87,7 +88,7 @@ main {
     position: relative;
 
     &::before {
-      border-color: transparent transparent transparent $blue;
+      border-color: transparent transparent transparent $red;
       border-style: solid;
       border-width: 19px 0 19px 15px;
       content: '';
@@ -112,7 +113,8 @@ main {
   &.fifty-fifty {
     div {
       align-items: center;
-      background-color: $gray-1;
+      background-color: $blue;
+      color: white;
       display: flex;
       justify-content: center;
       position: relative;
@@ -120,12 +122,13 @@ main {
     }
 
     div:last-child {
-      background-color: $gray-2;
+      background-color: $gray-1;
+      color: black;
     }
 
     &.point-right {
       div:first-child::before {
-        border-color: transparent transparent transparent $gray-1;
+        border-color: transparent transparent transparent $blue;
         border-style: solid;
         border-width: 40px 0 40px 40px;
         content: '';
@@ -137,10 +140,34 @@ main {
       }
     }
 
-    &.no-img {
-      div { padding: 100px 40px; }
+    &.point-left {
+      div:last-child {
 
-      div:last-child h3 { color: white; }
+        &::before {
+          border-color: transparent $gray-1 transparent transparent;
+          border-style: solid;
+          border-width: 40px 40px 40px 0;
+          content: '';
+          height: 0;
+          position: absolute;
+          left: -40px;
+          width: 0;
+          z-index: 1;
+        }
+      }
+    }
+
+    &.no-img {
+      div {
+        background-color: $gray-1;
+        color: black;
+        padding: 100px 40px;
+      }
+
+      div:last-child {
+        background-color: $blue;
+        color: white;
+      }
     }
   }
 
@@ -148,13 +175,13 @@ main {
     flex-direction: column;
 
     > div:first-child {
-      background-color: $gray-2;
+      background-color: $blue;
       color: white;
       padding: 40px;
       position: relative;
 
       &::before {
-        border-color: $gray-2 transparent transparent transparent;
+        border-color: $blue transparent transparent transparent;
         border-style: solid;
         border-width: 30px 40px 0 40px;
         bottom: -30px;
@@ -173,6 +200,11 @@ main {
 
       .alphabet-box {
         padding: 40px 20px;
+
+        span {
+          color: $red;
+          font-size: 24px;
+        }
       }
 
       @media SCREEN and (min-width: 767px) {
