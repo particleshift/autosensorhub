@@ -404,7 +404,8 @@ main {
   border-bottom: 2px solid black;
   border-right: 2px solid black;
   margin: auto;
-  max-width: 800px; }
+  max-width: 800px;
+  overflow: hidden; }
 
 #header {
   background-image: url("https://raw.githubusercontent.com/particleshift/autosensorhub/master/dist/assets/subaru.jpg");
@@ -428,15 +429,17 @@ main {
     margin: 0 140px 0; }
 
 .section-header {
+  align-items: center;
   background-color: #505050;
-  border-top: 2px solid #DFDFDF;
+  box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
-  font-size: 22px;
-  line-height: 1;
-  height: 52px;
   flex-direction: row;
-  align-items: center; }
+  font-size: 22px;
+  height: 52px;
+  line-height: 1;
+  position: relative;
+  z-index: 1; }
   .section-header h2, .section-header span {
     font-size: inherit;
     line-height: inherit; }
@@ -462,6 +465,14 @@ main {
   display: flex; }
   .box-container img {
     width: 100%; }
+  .box-container .img-box {
+    overflow: hidden; }
+    .box-container .img-box:active, .box-container .img-box:focus {
+      box-shadow: 0px 0px 15px 2px rgba(28, 117, 188, 0.5); }
+    .box-container .img-box img {
+      transition: all .25s ease-out; }
+      .box-container .img-box img:hover, .box-container .img-box img:active {
+        transform: scale(1.2); }
   .box-container.fifty-fifty div {
     align-items: center;
     background-color: #1c75bc;
@@ -503,12 +514,12 @@ main {
   .box-container.point-down {
     flex-direction: column; }
     .box-container.point-down > div:first-child {
-      background-color: #1c75bc;
-      color: white;
+      background-color: #DFDFDF;
+      color: black;
       padding: 40px;
       position: relative; }
       .box-container.point-down > div:first-child::before {
-        border-color: #1c75bc transparent transparent transparent;
+        border-color: #DFDFDF transparent transparent transparent;
         border-style: solid;
         border-width: 30px 40px 0 40px;
         bottom: -30px;
@@ -524,8 +535,13 @@ main {
       .box-container.point-down > div:last-child .alphabet-box {
         padding: 40px 20px; }
         .box-container.point-down > div:last-child .alphabet-box span {
+          border-bottom: 1px solid #ef4136;
           color: #ef4136;
-          font-size: 24px; }
+          font-family: 'Open Sans', sans-serif;
+          font-size: 30px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          padding: 0 10px; }
       @media SCREEN and (min-width: 767px) {
         .box-container.point-down > div:last-child {
           flex-direction: row; }

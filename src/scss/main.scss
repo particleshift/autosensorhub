@@ -50,6 +50,7 @@ main {
   border-right: 2px solid black;
   margin: auto;
   max-width: 800px;
+  overflow: hidden;
 }
 
 #header {
@@ -84,16 +85,17 @@ main {
 }
 
 .section-header {
+  align-items: center;
   background-color: $gray-2;
-  //border-bottom: 2px solid $gray-1;
-  border-top: 2px solid $gray-1;
+  box-shadow: 0px -5px 15px 0px rgba(0,0,0,.5);
   color: white;
   display: flex;
-  font-size: 22px; // this + 30px = height
-  line-height: 1;
-  height: 52px; // height = font-size + 30px
   flex-direction: row;
-  align-items: center;
+  font-size: 22px; // this + 30px = height
+  height: 52px; // height = font-size + 30px
+  line-height: 1;
+  position: relative;
+  z-index: 1;
 
   h2, span {
     font-size: inherit;
@@ -129,6 +131,19 @@ main {
 
   img { width: 100%; }
 
+  .img-box {
+    overflow: hidden;
+
+    img {
+      transition: all .25s ease-out;
+
+      &:hover,
+      &:active {
+        transform: scale(1.2);
+      }
+    }
+  }
+
   &.fifty-fifty {
     div {
       align-items: center;
@@ -153,26 +168,23 @@ main {
         content: '';
         height: 0;
         position: absolute;
-        right: -40px;
+        right: -39px;
         width: 0;
         z-index: 1;
       }
     }
 
     &.point-left {
-      div:last-child {
-
-        &::before {
-          border-color: transparent $gray-1 transparent transparent;
-          border-style: solid;
-          border-width: 40px 40px 40px 0;
-          content: '';
-          height: 0;
-          position: absolute;
-          left: -40px;
-          width: 0;
-          z-index: 1;
-        }
+      div:last-child::before {
+        border-color: transparent $gray-1 transparent transparent;
+        border-style: solid;
+        border-width: 40px 40px 40px 0;
+        content: '';
+        height: 0;
+        position: absolute;
+        left: -39px;
+        width: 0;
+        z-index: 1;
       }
     }
 
@@ -194,13 +206,13 @@ main {
     flex-direction: column;
 
     > div:first-child {
-      background-color: $blue;
-      color: white;
+      background-color: $gray-1;
+      color: black;
       padding: 40px;
       position: relative;
 
       &::before {
-        border-color: $blue transparent transparent transparent;
+        border-color: $gray-1 transparent transparent transparent;
         border-style: solid;
         border-width: 30px 40px 0 40px;
         bottom: -30px;
@@ -221,8 +233,13 @@ main {
         padding: 40px 20px;
 
         span {
+          border-bottom: 1px solid $red;
           color: $red;
-          font-size: 24px;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 30px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          padding: 0 10px;
         }
       }
 
