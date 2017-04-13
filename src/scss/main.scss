@@ -1,7 +1,7 @@
 @import 'fonts.scss';
 $blue: #1c75bc;
 $red: #ef4136;
-$gray-1: #EFEFEF;
+$gray-1: #DFDFDF;
 $gray-2: #505050;
 
 .text-left { text-align: left; }
@@ -15,12 +15,29 @@ html, body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, p, span { margin: 0; }
+h1, h2, h3, h4, h5, p, span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  letter-spacing: .5px;
+  margin: 0;
+}
 
 h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.number {
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 400;
 }
 
 ul {
@@ -72,30 +89,31 @@ main {
   border-top: 2px solid $gray-1;
   color: white;
   display: flex;
-  height: 38px;
+  font-size: 22px; // this + 30px = height
+  line-height: 1;
+  height: 52px; // height = font-size + 30px
   flex-direction: row;
   align-items: center;
 
   h2, span {
-
+    font-size: inherit;
+    line-height: inherit;
   }
 
   h2 {
-    background-color: $red;
+    background-color: $blue;
     color: white;
-    font-size: 18px;
-    line-height: 1;
-    padding: 10px 30px 10px 20px;
+    padding: 15px 30px 15px 20px;
     position: relative;
 
     &::before {
-      border-color: transparent transparent transparent $red;
+      border-color: transparent transparent transparent $blue;
       border-style: solid;
-      border-width: 19px 0 19px 15px;
+      border-width: 26px 0 26px 20px; // top & bottom = 1/2 of section-header height
       content: '';
       height: 0;
       position: absolute;
-      right: -15px;
+      right: -20px;
       top: 0;
       width: 0;
     }
