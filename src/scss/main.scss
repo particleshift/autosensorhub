@@ -4,6 +4,7 @@ $red: #ef4136;
 $gray-1: #DFDFDF;
 $gray-2: #505050;
 
+//utility classes
 .text-left { text-align: left; }
 
 .text-right { text-align: right; }
@@ -143,111 +144,102 @@ main {
       }
     }
   }
+}
 
-  &.fifty-fifty {
-    div {
-      align-items: center;
-      background-color: $blue;
-      color: white;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      width: 50%;
-    }
+.fifty-fifty {
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+  }
+}
 
-    div:last-child {
-      background-color: $gray-1;
-      color: black;
-    }
+.point-right {
+  div:first-child::before {
+    border-color: transparent transparent transparent $blue;
+    border-style: solid;
+    border-width: 40px 0 40px 40px;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: -39px;
+    width: 0;
+    z-index: 1;
+  }
+}
 
-    &.point-right {
-      div:first-child::before {
-        border-color: transparent transparent transparent $blue;
-        border-style: solid;
-        border-width: 40px 0 40px 40px;
-        content: '';
-        height: 0;
-        position: absolute;
-        right: -39px;
-        width: 0;
-        z-index: 1;
-      }
-    }
+.point-left {
+  div:last-child::before {
+    border-color: transparent $gray-1 transparent transparent;
+    border-style: solid;
+    border-width: 40px 40px 40px 0;
+    content: '';
+    height: 0;
+    position: absolute;
+    left: -39px;
+    width: 0;
+    z-index: 1;
+  }
+}
 
-    &.point-left {
-      div:last-child::before {
-        border-color: transparent $gray-1 transparent transparent;
-        border-style: solid;
-        border-width: 40px 40px 40px 0;
-        content: '';
-        height: 0;
-        position: absolute;
-        left: -39px;
-        width: 0;
-        z-index: 1;
-      }
-    }
+.compatibility {
+  flex-direction: column;
 
-    &.no-img {
-      div {
-        background-color: $gray-1;
-        color: black;
-        padding: 100px 40px;
-      }
+  > div:first-child {
+    background-color: $gray-1;
+    color: black;
+    padding: 40px;
+    position: relative;
 
-      div:last-child {
-        background-color: $blue;
-        color: white;
-      }
+    &::before {
+      border-color: $gray-1 transparent transparent transparent;
+      border-style: solid;
+      border-width: 30px 40px 0 40px;
+      bottom: -30px;
+      content: '';
+      height: 0;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 0;
     }
   }
 
-  &.point-down {
+  > div:last-child {
+    display: flex;
     flex-direction: column;
 
-    > div:first-child {
-      background-color: $gray-1;
-      color: black;
-      padding: 40px;
-      position: relative;
+    .alphabet-box {
+      padding: 40px 20px;
 
-      &::before {
-        border-color: $gray-1 transparent transparent transparent;
-        border-style: solid;
-        border-width: 30px 40px 0 40px;
-        bottom: -30px;
-        content: '';
-        height: 0;
-        left: 50%;
-        position: absolute;
-        transform: translateX(-50%);
-        width: 0;
+      span {
+        border-bottom: 1px solid $red;
+        color: $red;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        padding: 0 10px;
       }
     }
 
-    > div:last-child {
-      display: flex;
-      flex-direction: column;
+    @media SCREEN and (min-width: 767px) {
+      flex-direction: row;
 
-      .alphabet-box {
-        padding: 40px 20px;
-
-        span {
-          border-bottom: 1px solid $red;
-          color: $red;
-          font-family: 'Open Sans', sans-serif;
-          font-size: 30px;
-          font-weight: 800;
-          letter-spacing: 1px;
-          padding: 0 10px;
-        }
-      }
-
-      @media SCREEN and (min-width: 767px) {
-        flex-direction: row;
-
-        .alphabet-box { width: 50%; }
-      }
+      .alphabet-box { width: 50%; }
     }
   }
+}
+
+
+.background-blue {
+  background-color: $blue;
+  color: white;
+}
+
+.background-gray {
+  background-color: $gray-1;
+  color: black;
 }
