@@ -471,77 +471,84 @@ main {
       transition: all .25s ease-out; }
       .box-container .img-box img:hover, .box-container .img-box img:active {
         transform: scale(1.2); }
-  .box-container.fifty-fifty div {
-    align-items: center;
-    background-color: #1c75bc;
-    color: white;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 50%; }
-  .box-container.fifty-fifty div:last-child {
-    background-color: #DFDFDF;
-    color: black; }
-  .box-container.fifty-fifty.point-right div:first-child::before {
-    border-color: transparent transparent transparent #1c75bc;
-    border-style: solid;
-    border-width: 40px 0 40px 40px;
-    content: '';
-    height: 0;
-    position: absolute;
-    right: -39px;
-    width: 0;
-    z-index: 1; }
-  .box-container.fifty-fifty.point-left div:last-child::before {
-    border-color: transparent #DFDFDF transparent transparent;
-    border-style: solid;
-    border-width: 40px 40px 40px 0;
-    content: '';
-    height: 0;
-    position: absolute;
-    left: -39px;
-    width: 0;
-    z-index: 1; }
-  .box-container.fifty-fifty.no-img div {
+
+.fifty-fifty div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 50%; }
+
+.point-right div:first-child::before {
+  border-color: transparent transparent transparent transparent;
+  border-left-color: inherit;
+  border-style: solid;
+  border-width: 40px 0 40px 40px;
+  content: '';
+  height: 0;
+  position: absolute;
+  right: -39px;
+  width: 0;
+  z-index: 1; }
+
+.point-left div:last-child::before {
+  border-color: transparent transparent transparent transparent;
+  border-right-color: #DFDFDF;
+  border-style: solid;
+  border-width: 40px 40px 40px 0;
+  content: '';
+  height: 0;
+  position: absolute;
+  left: -39px;
+  width: 0;
+  z-index: 1; }
+
+.no-img div {
+  padding: 100px 40px; }
+
+.compatibility {
+  flex-direction: column; }
+  .compatibility > div:first-child {
     background-color: #DFDFDF;
     color: black;
-    padding: 100px 40px; }
-  .box-container.fifty-fifty.no-img div:last-child {
-    background-color: #1c75bc;
-    color: white; }
-  .box-container.point-down {
+    padding: 40px;
+    position: relative; }
+    .compatibility > div:first-child::before {
+      border-color: #DFDFDF transparent transparent transparent;
+      border-style: solid;
+      border-width: 30px 40px 0 40px;
+      bottom: -30px;
+      content: '';
+      height: 0;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 0; }
+  .compatibility > div:last-child {
+    display: flex;
     flex-direction: column; }
-    .box-container.point-down > div:first-child {
-      background-color: #DFDFDF;
-      color: black;
-      padding: 40px;
-      position: relative; }
-      .box-container.point-down > div:first-child::before {
-        border-color: #DFDFDF transparent transparent transparent;
-        border-style: solid;
-        border-width: 30px 40px 0 40px;
-        bottom: -30px;
-        content: '';
-        height: 0;
-        left: 50%;
-        position: absolute;
-        transform: translateX(-50%);
-        width: 0; }
-    .box-container.point-down > div:last-child {
-      display: flex;
-      flex-direction: column; }
-      .box-container.point-down > div:last-child .alphabet-box {
-        padding: 40px 20px; }
-        .box-container.point-down > div:last-child .alphabet-box span {
-          border-bottom: 1px solid #ef4136;
-          color: #ef4136;
-          font-family: 'Open Sans', sans-serif;
-          font-size: 30px;
-          font-weight: 800;
-          letter-spacing: 1px;
-          padding: 0 10px; }
-      @media SCREEN and (min-width: 767px) {
-        .box-container.point-down > div:last-child {
-          flex-direction: row; }
-          .box-container.point-down > div:last-child .alphabet-box {
-            width: 50%; } }
+    .compatibility > div:last-child .alphabet-box {
+      padding: 40px 20px; }
+      .compatibility > div:last-child .alphabet-box span {
+        border-bottom: 1px solid #ef4136;
+        color: #ef4136;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        padding: 0 10px; }
+    @media SCREEN and (min-width: 767px) {
+      .compatibility > div:last-child {
+        flex-direction: row; }
+        .compatibility > div:last-child .alphabet-box {
+          width: 50%; } }
+
+.background-blue {
+  background-color: #1c75bc;
+  border-color: #1c75bc;
+  color: white; }
+
+.background-gray {
+  background-color: #DFDFDF;
+  border-color: #DFDFDF;
+  color: black; }
