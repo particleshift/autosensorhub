@@ -388,9 +388,15 @@ h1 {
 
 h3 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: 1px; }
+  @media screen and (min-width: 550px) {
+    h3 {
+      font-size: 22px; } }
+  @media screen and (min-width: 768px) {
+    h3 {
+      font-size: 30px; } }
 
 .number {
   font-family: 'Share Tech Mono', monospace;
@@ -462,7 +468,11 @@ main {
     margin-left: 35px; }
 
 .box-container {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 550px) {
+    .box-container {
+      flex-direction: row; } }
   .box-container img {
     width: 100%; }
   .box-container .img-box {
@@ -477,7 +487,10 @@ main {
   display: flex;
   justify-content: center;
   position: relative;
-  width: 50%; }
+  width: 100%; }
+  @media screen and (min-width: 550px) {
+    .fifty-fifty div {
+      width: 50%; } }
 
 .point-right div:first-child::before {
   border-color: transparent transparent transparent transparent;
@@ -490,7 +503,17 @@ main {
   right: -39px;
   width: 0;
   z-index: 1; }
+  @media screen and (max-width: 549px) {
+    .point-right div:first-child::before {
+      bottom: 0;
+      left: 50%;
+      transform: translate3d(-50%, 60px, 0) rotate(90deg); } }
 
+.point-left div:first-child {
+  order: 2; }
+  @media screen and (min-width: 550px) {
+    .point-left div:first-child {
+      order: 0; } }
 .point-left div:last-child::before {
   border-color: transparent transparent transparent transparent;
   border-right-color: #DFDFDF;
@@ -502,9 +525,35 @@ main {
   left: -39px;
   width: 0;
   z-index: 1; }
+  @media screen and (max-width: 549px) {
+    .point-left div:last-child::before {
+      bottom: 0;
+      left: 50%;
+      transform: translate3d(-50%, 60px, 0) rotate(270deg); } }
+
+.text-box {
+  box-sizing: border-box;
+  padding: 40px 15px; }
+  @media screen and (min-width: 550px) {
+    .text-box {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 768px) {
+    .text-box {
+      padding-left: 40px;
+      padding-right: 40px; } }
 
 .no-img div {
-  padding: 100px 40px; }
+  padding-bottom: 60px;
+  padding-top: 60px; }
+  @media screen and (min-width: 550px) {
+    .no-img div {
+      padding-bottom: 60px;
+      padding-top: 60px; } }
+  @media screen and (min-width: 768px) {
+    .no-img div {
+      padding-bottom: 100px;
+      padding-top: 100px; } }
 
 .compatibility {
   flex-direction: column; }

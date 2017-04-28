@@ -31,9 +31,17 @@ h1 {
 
 h3 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: 1px;
+
+  @media screen AND (min-width: 550px) {
+    font-size: 22px;
+  }
+
+  @media screen AND (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .number {
@@ -129,6 +137,11 @@ main {
 
 .box-container {
   display: flex;
+  flex-direction: column;
+
+  @media screen AND (min-width: 550px) {
+    flex-direction: row;
+  }
 
   img { width: 100%; }
 
@@ -152,7 +165,11 @@ main {
     display: flex;
     justify-content: center;
     position: relative;
-    width: 50%;
+    width: 100%;
+
+    @media screen AND (min-width: 550px) {
+      width: 50%;
+    }
   }
 }
 
@@ -168,10 +185,22 @@ main {
     right: -39px;
     width: 0;
     z-index: 1;
+
+    @media screen AND (max-width: 549px) {
+      bottom: 0;
+      left: 50%;
+      transform: translate3d(-50%, 60px, 0) rotate(90deg);
+    }
   }
 }
 
 .point-left {
+  div:first-child {
+    order: 2;
+
+    @media screen AND (min-width: 550px) { order: 0; }
+  }
+
   div:last-child::before {
     border-color: transparent transparent transparent transparent;
     border-right-color: $gray-1;
@@ -183,12 +212,44 @@ main {
     left: -39px;
     width: 0;
     z-index: 1;
+
+    @media screen AND (max-width: 549px) {
+      bottom: 0;
+      left: 50%;
+      transform: translate3d(-50%, 60px, 0) rotate(270deg);
+    }
+  }
+}
+
+.text-box {
+  box-sizing: border-box;
+  padding: 40px 15px;
+
+  @media screen AND (min-width: 550px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media screen AND (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
 .no-img {
   div {
-    padding: 100px 40px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    @media screen AND (min-width: 550px) {
+      padding-bottom: 60px;
+      padding-top: 60px;
+    }
+
+    @media screen AND (min-width: 768px) {
+      padding-bottom: 100px;
+      padding-top: 100px
+    }
   }
 }
 
