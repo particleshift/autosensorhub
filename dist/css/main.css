@@ -405,6 +405,12 @@ h3 {
 ul {
   list-style-type: none;
   padding: 0; }
+  ul li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px; }
+    ul li:last-child {
+      margin-bottom: 0; }
 
 main {
   border-bottom: 2px solid black;
@@ -446,9 +452,23 @@ main {
   line-height: 1;
   position: relative;
   z-index: 1; }
+  .section-header::before {
+    background: -moz-linear-gradient(top, transparent 2%, transparent 17%, rgba(0, 0, 0, 0.54) 96%, black 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, transparent 2%, transparent 17%, rgba(0, 0, 0, 0.54) 96%, black 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, transparent 2%, transparent 17%, rgba(0, 0, 0, 0.54) 96%, black 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+    /* IE6-9 */
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%; }
   .section-header h2, .section-header span {
     font-size: inherit;
-    line-height: inherit; }
+    line-height: inherit;
+    z-index: 1; }
   .section-header h2 {
     background-color: #1c75bc;
     color: white;
@@ -464,6 +484,14 @@ main {
       right: -20px;
       top: 0;
       width: 0; }
+    .section-header h2::after {
+      background-color: black;
+      bottom: 0;
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: calc(100% + 2px); }
   .section-header span {
     margin-left: 35px; }
 
@@ -591,6 +619,25 @@ main {
         flex-direction: row; }
         .compatibility > div:last-child .alphabet-box {
           width: 50%; } }
+
+.shipping-warranty {
+  flex-direction: column; }
+  @media screen and (min-width: 768px) {
+    .shipping-warranty {
+      flex-direction: row; } }
+  .shipping-warranty .text-box {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .shipping-warranty .text-box {
+        align-items: center;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        text-align: center;
+        width: 50%; } }
 
 .background-blue {
   background-color: #1c75bc;
