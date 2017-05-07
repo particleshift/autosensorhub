@@ -64,11 +64,16 @@ ul {
   }
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
 main {
   border-bottom: 2px solid black;
   border-right: 2px solid black;
   margin: auto;
-  max-width: 800px;
+  max-width: 1024px;
   overflow: hidden;
 }
 
@@ -255,6 +260,7 @@ main {
 
 .text-box {
   box-sizing: border-box;
+  flex-direction: column;
   padding: 40px 15px;
 
   @media screen AND (min-width: 550px) {
@@ -368,4 +374,40 @@ main {
   background-color: $gray-1;
   border-color: $gray-1;
   color: black;
+}
+
+/*.badge-container {
+  bottom: 0;
+
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  width: auto;
+
+  > div {
+    float: right;
+    height: 100%;
+    margin-left: 20px;
+    width: 150px;
+  }
+}*/
+
+.shipping-warranty .badge-container {
+  height: 150px;
+  justify-content: flex-start;
+  padding: 40px 0 0;
+  width: 100%;
+
+  @media screen AND (min-width: 768px) {
+    justify-content: center;
+  }
+
+  > div {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+
+    &:first-of-type { margin-right: 20px; }
+  }
 }

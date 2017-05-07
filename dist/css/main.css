@@ -412,11 +412,15 @@ ul {
     ul li:last-child {
       margin-bottom: 0; }
 
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; }
+
 main {
   border-bottom: 2px solid black;
   border-right: 2px solid black;
   margin: auto;
-  max-width: 800px;
+  max-width: 1024px;
   overflow: hidden; }
 
 #header {
@@ -561,6 +565,7 @@ main {
 
 .text-box {
   box-sizing: border-box;
+  flex-direction: column;
   padding: 40px 15px; }
   @media screen and (min-width: 550px) {
     .text-box {
@@ -648,3 +653,34 @@ main {
   background-color: #DFDFDF;
   border-color: #DFDFDF;
   color: black; }
+
+/*.badge-container {
+  bottom: 0;
+
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  width: auto;
+
+  > div {
+    float: right;
+    height: 100%;
+    margin-left: 20px;
+    width: 150px;
+  }
+}*/
+.shipping-warranty .badge-container {
+  height: 150px;
+  justify-content: flex-start;
+  padding: 40px 0 0;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .shipping-warranty .badge-container {
+      justify-content: center; } }
+  .shipping-warranty .badge-container > div {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 150px; }
+    .shipping-warranty .badge-container > div:first-of-type {
+      margin-right: 20px; }

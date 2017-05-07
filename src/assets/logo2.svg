@@ -1,0 +1,77 @@
+<svg id="Layer_6" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1610.03 546.79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-6, .cls-7 {
+        fill: #1c75bc;
+      }
+
+      .cls-4 {
+        font-size: 93px;
+      }
+
+      .cls-4, .cls-8 {
+        fill: #ef4136;
+        font-family: Fenix BlackletterCaps;
+      }
+
+      .cls-5 {
+        letter-spacing: -3px;
+      }
+
+      .cls-6 {
+        font-size: 68px;
+      }
+
+      .cls-6, .cls-7 {
+        font-family: Roboto;
+        letter-spacing: 2.73px;
+      }
+
+      .cls-7 {
+        font-size: 65px;
+      }
+
+      .cls-8 {
+        font-size: 72px;
+        letter-spacing: 1px;
+      }
+
+      .cls-9 {
+        letter-spacing: 5px;
+      }
+
+      .cls-10 {
+        letter-spacing: 6px;
+      }
+    </style>
+  </defs>
+  <title>logo2</title>
+  <line class="cls-1" x1="138.67" y1="40.34" x2="138.67" y2="87.08"/>
+  <circle id="Dot" class="cls-2" cx="138.82" cy="26.67" r="22.57"/>
+  <line class="cls-1" x1="269.67" y1="271.11" x2="229.18" y2="247.74"/>
+  <circle id="Dot-2" data-name="Dot" class="cls-2" cx="658.09" cy="654.42" r="22.57" transform="translate(-610.24 527.52) rotate(-60)"/>
+  <circle id="Blue_Outer" data-name="Blue Outer" class="cls-3" cx="208.44" cy="204.44" r="204.44"/>
+  <circle id="White_Inner" data-name="White Inner" class="cls-2" cx="208.44" cy="204.44" r="127.03"/>
+  <line class="cls-1" x1="209.26" y1="49.25" x2="209.26" y2="96"/>
+  <circle id="Dot-3" data-name="Dot" class="cls-2" cx="209.41" cy="35.59" r="22.57"/>
+  <line class="cls-1" x1="75.77" y1="278.58" x2="116.25" y2="255.21"/>
+  <circle id="Dot-4" data-name="Dot" class="cls-2" cx="432.45" cy="661.72" r="22.57" transform="translate(-645.49 -64.74) rotate(-30)"/>
+  <line class="cls-1" x1="340.26" y1="280.03" x2="299.77" y2="256.65"/>
+  <circle id="Dot-5" data-name="Dot" class="cls-2" cx="728.68" cy="663.33" r="22.57" transform="translate(-582.67 593.11) rotate(-60)"/>
+  <text class="cls-4" transform="translate(104.14 220.39) scale(1 1.2)"><tspan class="cls-5">A</tspan><tspan x="108.44" y="0">S</tspan></text>
+  <text class="cls-6" transform="translate(129.67 277.78) scale(1.1 0.95)">HUB</text>
+  <circle id="Dot-6" data-name="Dot" class="cls-2" cx="1580.45" cy="661.72" r="22.57" transform="translate(-491.67 509.29) rotate(-30)"/>
+  <text x="-372.56" y="-369.64"/>  <text class="cls-7" transform="translate(476.18 289.91) scale(1.1 0.95)">HUB</text>
+  <text class="cls-8" transform="translate(481.14 142.39) scale(1 1.2)">A<tspan class="cls-9" x="88.85" y="0">U</tspan><tspan class="cls-9" x="168.26" y="0">T</tspan><tspan class="cls-9" x="244.8" y="0">O</tspan><tspan class="cls-9"><tspan x="0" y="72">S</tspan><tspan class="cls-10" x="77.11" y="72">E</tspan><tspan x="148.75" y="72">NSOR</tspan></tspan></text>
+</svg>
