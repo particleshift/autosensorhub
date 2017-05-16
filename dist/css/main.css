@@ -430,8 +430,6 @@ main {
   height: 200px;
   padding: 20px;
   position: relative; }
-  #header img {
-    display: none; }
   #header .logo, #header h1 {
     position: absolute;
     top: 50%;
